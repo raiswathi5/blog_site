@@ -24,21 +24,25 @@ render() {
     return (
       <div className="row">
         { this.state.blogs.map(blog =>
-            <div className="leftcolumn">
-              <div class="card">
+            <div className="blog">
+              {/* <div class="card">
                 <h2>{blog.title}</h2>
                 <h5>{blog.category}, {blog.author}</h5>
                 <img src={blog.imgs.large} alt="image" height="200px" />
-                {/* <div class="fakeimg" style="height:200px;">Image</div> */}
-                <p>{blog.description}</p>
-              </div>
+                <div class="fakeimg" style="height:200px;">Image</div>
 
-                {/* <img src={blog.imgs.large} alt="image" />
-                <div>Title: {blog.title}</div>
-                <div>Author: {blog.author}</div>
-                <div>Description: {blog.description}</div>
-                <div>Category: {blog.category}</div>
-                <img src={blog.imgs.thumb} alt="image" height="42" width="42"/> */}
+                <p>{blog.description}</p>
+              </div> */}
+
+                <img src={blog.imgs.large} alt="image" height="400px" width="100%" />
+                <h1>{blog.title}</h1>
+                <img className="thumb" src={blog.imgs.thumb} alt="image" height="60px"/>
+                <b>{blog.author}</b>
+                <p className="date"> {blog.published_date} </p>  
+                <p>{blog.category}</p>                
+                <h3>{blog.title}</h3>
+                <p>{blog.description}</p>
+                {/* <img src={blog.imgs.thumb} alt="image" height="42" width="42"/> */}
             </div>
         )}
       </div>

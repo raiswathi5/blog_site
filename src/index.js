@@ -4,6 +4,7 @@ import "./index.css";
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import App from "./App";
 import BlogPage from "./blog_page";
+import ListingPage from "./listing_page";
 import Header from "./Header";
 import Footer from "./Footer";
 import * as serviceWorker from './serviceWorker';
@@ -12,9 +13,9 @@ const routing = (
   <Router>
     <div>
       <Header />
-      <hr />
+      {/* <hr /> */}
       <Switch>
-        <Route exact path="/" component={App} />
+        <Route exact path="/" component={ListingPage} />
         <Route exact path="/blog_page" component={BlogPage} />
       </Switch>
       <Footer />
